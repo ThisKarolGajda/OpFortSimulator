@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.ThisKarolGajda.Lamp:common:15dce0474a">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/ThisKarolGajda/Lamp/common/15dce0474a/common-15dce0474a.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/ThisKarolGajda/Lamp/common/15dce0474a/common-15dce0474a-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/ThisKarolGajda/Lamp/common/15dce0474a/common-15dce0474a-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

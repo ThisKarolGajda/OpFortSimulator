@@ -1,0 +1,6 @@
+name: OpBaseSimulator
+version: '1.0-SNAPSHOT'
+main: me.opkarol.opfortsimulator.OpFortSimulator
+api-version: 1.19
+depend:
+  - WorldGuard

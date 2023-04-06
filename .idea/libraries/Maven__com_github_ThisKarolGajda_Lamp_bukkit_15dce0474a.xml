@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.ThisKarolGajda.Lamp:bukkit:15dce0474a">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/ThisKarolGajda/Lamp/bukkit/15dce0474a/bukkit-15dce0474a.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/ThisKarolGajda/Lamp/bukkit/15dce0474a/bukkit-15dce0474a-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/ThisKarolGajda/Lamp/bukkit/15dce0474a/bukkit-15dce0474a-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
