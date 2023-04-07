@@ -1,7 +1,7 @@
 package me.opkarol.opfortsimulator.commands;
 
 import me.opkarol.opfortsimulator.OpFortSimulator;
-import me.opkarol.opfortsimulator.SimpleLocation;
+import me.opkarol.opfortsimulator.SimpleWorldLocation;
 import me.opkarol.opfortsimulator.fort.*;
 import me.opkarol.opfortsimulator.fort.roles.IFortRole;
 import org.bukkit.entity.Player;
@@ -32,8 +32,10 @@ public class FortCommand {
 
     @Subcommand("create")
     public void createFort(@NotNull Player player, String fortName) {
-        IFort fort = new FortBuilder(fortName, SimpleLocation.of(player));
-        player.sendMessage(FortManager.createAndRegisterFort(fort, player).name());
+        IFort fort = new FortBuilder(fortName, SimpleWorldLocation.of(player));
+
+        FortManager.createAndRegisterFortAsync(fort, player)
+                .thenAccept(fortCreateResponse -> player.sendMessage(fortCreateResponse.name()));
     }
 
     @Subcommand("info")
@@ -65,7 +67,7 @@ public class FortCommand {
             return;
         }
         // todo ask twice for confirmation - or like /... leave confirm
-        Fort fort = (Fort) fortOptional.get();
+        IFort fort = fortOptional.get();
         Optional<IFortRole> fortRoleOptional = fort.getFortRoleForPlayer(uuid);
 
         if (fortRoleOptional.isPresent()) {
@@ -78,6 +80,24 @@ public class FortCommand {
             }
         }
         fort.getFortPlayersList().deletePlayer(uuid);
+    }
+
+    @Subcommand("border")
+    public void displayBorder(@NotNull Player player) {
+        player.sendMessage("You may need to increase particles settings in order to see the fort border.");
+        fortDatabase.getFortFromPlayer(player.getUniqueId())
+                .ifPresentOrElse(fort -> fort.spawnFortBorder(player),
+                        () -> player.sendMessage("Don't have fort!"));
+    }
+
+    @Subcommand("expand")
+    public void expandBorder(@NotNull Player player, int x, int z) {
+        fortDatabase.getFortFromPlayer(player.getUniqueId())
+                .ifPresentOrElse(fort -> {
+                            fort.expandFortBorder(x, z);
+
+                        },
+                        () -> player.sendMessage("Don't have fort!"));
     }
 
 }

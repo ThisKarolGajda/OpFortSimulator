@@ -1,5 +1,8 @@
+me\opkarol\opfortsimulator\worldguard\WorldGuardRegion.class
 me\opkarol\opfortsimulator\fort\FortManager$FORT_CREATE_RESPONSE.class
 me\opkarol\opfortsimulator\buildings\BuildingsList.class
+me\opkarol\opfortsimulator\SimpleWorldLocation.class
+me\opkarol\opfortsimulator\worldguard\WorldGuardBorder.class
 me\opkarol\opfortsimulator\buildings\Building.class
 me\opkarol\opfortsimulator\worldguard\WorldGuardAPI.class
 me\opkarol\opfortsimulator\buildings\BuildingsTranslation.class
@@ -8,7 +11,6 @@ me\opkarol\opfortsimulator\fort\Fort.class
 me\opkarol\opfortsimulator\buildings\BuildingPriority.class
 me\opkarol\opfortsimulator\fort\roles\FortPermission.class
 me\opkarol\opfortsimulator\fort\IFort.class
-me\opkarol\opfortsimulator\buildings\Border.class
 me\opkarol\opfortsimulator\buildings\types\TownHallBuilding.class
 me\opkarol\opfortsimulator\buildings\BuildingType.class
 me\opkarol\opfortsimulator\players\FortPlayer.class
@@ -21,7 +23,6 @@ me\opkarol\opfortsimulator\SimpleLocation.class
 me\opkarol\opfortsimulator\fort\FortRangeBorders.class
 me\opkarol\opfortsimulator\OpFortSimulator.class
 me\opkarol\opfortsimulator\fort\roles\FortRole.class
-me\opkarol\opfortsimulator\buildings\IBorder.class
 me\opkarol\opfortsimulator\players\IFortPlayer.class
 me\opkarol\opfortsimulator\fort\roles\FortRolesSet.class
 me\opkarol\opfortsimulator\buildings\IBuilding.class
